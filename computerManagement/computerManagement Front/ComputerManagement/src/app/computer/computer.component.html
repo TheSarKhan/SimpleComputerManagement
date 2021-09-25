@@ -1,0 +1,30 @@
+ 
+<div  style="display: block;
+margin-left: auto;
+margin-right: auto;" id="center-div" >
+    
+
+<div class="card" style="width:400px">
+     
+    <h1 style="display: block;
+    margin-left: auto;
+    margin-right: auto;">New Computer :</h1>
+    <div class="card-body">
+        <form (ngSubmit)="onSaveComputer()">
+          <div id="valid-des-div">
+            <label for="brand">Brand :</label>
+            <input type="text " class="form-control  " required [(ngModel)]="computer.brand"  [maxLength]="15"   [minlength]="3"  style="width: 300px;" name="brand">
+            <label for="model">Model :</label>
+            <input type="text "  [(ngModel)]="computer.model" required [maxLength]="15"   [minlength]="5"   class="form-control" style="width: 300px;" name="model">
+            <label for="ram">Ram :</label>
+            <input type="number" required [value]="4" [min]="4" [(ngModel)]="computer.ram" [max]="32" class="form-control" style="width: 300px;" name="ram">
+          </div>
+            <button style="display: block;
+            margin-left: auto;
+            margin-right: auto; margin-top: 15px;" class="btn btn-success">Submit</button>
+            </form>
+            
+    </div>
+  </div>
+</div>
+ 

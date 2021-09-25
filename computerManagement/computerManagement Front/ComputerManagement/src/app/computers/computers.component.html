@@ -1,0 +1,22 @@
+<h1>Computers List</h1>
+<button (click)="deleteAll()" class="btn btn-danger">Delete All</button>
+<table class="table table-bordered table-dark">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Model</th>
+        <th>Brand</th>
+        <th>Ram</th>
+        <th>Operations</th>
+    </tr>
+</thead>
+    <tbody>
+    <tr *ngFor="let computer of computers">
+         <td>{{computer.id}}</td>
+         <td>{{computer.model}}</td>
+         <td>{{computer.brand}}</td>
+         <td>{{computer.ram}}</td>
+         <td><button (click)="deleteTaskById(computer.id)" class="btn btn-danger">Delete</button></td>
+    </tr>
+</tbody>
+</table>
